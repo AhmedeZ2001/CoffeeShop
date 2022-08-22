@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".presentation.ui.Profile">
+
+        <TextView
+            android:id="@+id/tv_coffee_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/profile"
+            android:textColor="@color/cafe"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="10dp"
+            android:text="@string/name"
+            android:textColor="@color/cafe"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="10dp"
+            android:text="@string/email"
+            android:textColor="@color/cafe"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout" />
+
+    </LinearLayout>
+</layout>

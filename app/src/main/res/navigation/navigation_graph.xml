@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/start_page">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.coffeshop.presentation.ui.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+
+        <action
+            android:id="@+id/action_login_to_homepage"
+            app:destination="@id/homepage" >
+            <argument
+                android:name="name"
+                android:defaultValue="name" />
+            <argument
+                android:name="email"
+                android:defaultValue="email" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.coffeshop.presentation.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/start_page"
+        android:name="com.example.coffeshop.presentation.ui.start_page"
+        android:label="start_page" >
+        <action
+            android:id="@+id/action_start_page_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.coffeshop.presentation.ui.Profile"
+        android:label="profile" >
+        <action
+            android:id="@+id/action_profile_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.example.coffeshop.presentation.ui.HomePage"
+        android:label="homepage" >
+        <action
+            android:id="@+id/action_homepage_to_single_product"
+            app:destination="@id/single_product" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homepage_to_addProduct"
+            app:destination="@id/addProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/single_product"
+        android:name="com.example.coffeshop.presentation.ui.single_product"
+        android:label="fragment_single_product"
+        tools:layout="@layout/fragment_single_product" >
+        <action
+            android:id="@+id/action_single_product_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProduct"
+        android:name="com.example.coffeshop.presentation.ui.AddProduct"
+        android:label="AddProduct" >
+        <action
+            android:id="@+id/action_addProduct_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+</navigation>
